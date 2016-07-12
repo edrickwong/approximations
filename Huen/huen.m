@@ -19,6 +19,7 @@ t(1) = t0;
 for i = 1:intervals
     w(i+1) = w(i) + h*f(w(i),t(i));
     w_prime(i+1) = w(i) + (h/2)*(f(w(i),t(i))+f(w(i+1),t(i+1)));
+    w(i+1) = w_prime(i+1);
 end
 
 for i = 1:intervals + 1
